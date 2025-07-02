@@ -109,7 +109,6 @@ export const Profile = () => {
           throw new Error('Не авторизован');
         }
 
-        // Формируем URL в зависимости от того, используем ли мы прокси
         const url = isVercel 
           ? `${API_URL}?path=profile` 
           : `${API_URL}/profile`;
@@ -183,8 +182,7 @@ export const Profile = () => {
         preferredContact: userData.preferredContact || null,
         language: userData.language || null,
       };
-
-      // Формируем URL в зависимости от того, используем ли мы прокси
+      
       const url = isVercel 
         ? `${API_URL}?path=profile` 
         : `${API_URL}/profile`;

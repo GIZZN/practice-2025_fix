@@ -240,7 +240,6 @@ export const useAuth = () => {
         throw new Error('Пароль должен содержать минимум 8 символов');
       }
 
-      // Формируем URL в зависимости от того, используем ли мы прокси
       const url = isVercel 
         ? `${API_URL}?path=auth/login` 
         : `${API_URL}/auth/login`;
@@ -303,7 +302,6 @@ export const useAuth = () => {
         confirm_password: '***'
       });
 
-      // Формируем URL в зависимости от того, используем ли мы прокси
       const url = isVercel 
         ? `${API_URL}?path=auth/register` 
         : `${API_URL}/auth/register`;

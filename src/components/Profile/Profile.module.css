@@ -5,7 +5,7 @@
   max-width: 1200px;
   margin: 2rem auto;
   padding: 0 2rem;
-  min-height: calc(100vh - 80px - 400px); /* Adjust for header and footer heights */
+  min-height: calc(100vh - 80px - 400px); 
   animation: fadeIn 0.3s ease-in-out;
 }
 @keyframes fadeIn {

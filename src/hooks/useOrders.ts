@@ -32,7 +32,7 @@ const getLastOrderId = (): number => {
   if (typeof window === 'undefined') return 0;
   try {
     const lastId = localStorage.getItem(LAST_ORDER_ID_KEY);
-    return lastId ? parseInt(lastId, 10) : 8000; // Начинаем с 8000
+    return lastId ? parseInt(lastId, 10) : 8000; 
   } catch {
     return 8000;
   }
@@ -91,11 +91,9 @@ export function useOrders() {
   };
 
   const findOrder = (orderId: string): Order | null => {
-    // Пробуем найти заказ по точному совпадению
     let order = orders.find(order => order.id === orderId);
     
     if (!order) {
-      // Если не нашли, пробуем преобразовать строку в число и искать снова
       const numericId = parseInt(orderId, 10);
       if (!isNaN(numericId)) {
         order = orders.find(order => parseInt(order.id, 10) === numericId);
