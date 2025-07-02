@@ -425,9 +425,8 @@ export const Header = memo(() => {
           <div className={styles.auth}>
             {isAuthenticated ? (
               <>
-                <motion.div 
+                <div 
                   className={styles.profileWrapper}
-                  whileHover={{ scale: 1.05 }}
                 >
                   <Link href="/profile" className={styles.profileLink}>
                     <div className={styles.avatarWrapper}>
@@ -450,7 +449,7 @@ export const Header = memo(() => {
                     </div>
                     <span className={styles.userName}>{user?.name}</span>
                   </Link>
-                </motion.div>
+                </div>
                 <motion.div
                   variants={itemVariants}
                   whileHover={{ scale: 1.05 }}
@@ -505,12 +504,12 @@ export const Header = memo(() => {
 
         <Suspense fallback={<div className={styles.mobileNavPlaceholder} />}>
           <MobileHeader 
-            isOpen={isMenuOpen}
-            closeMenu={closeMenu}
-            user={user}
-            logout={logout}
-            isAuthenticated={isAuthenticated}
-          />
+          isOpen={isMenuOpen}
+          closeMenu={closeMenu}
+          user={user}
+          logout={logout}
+          isAuthenticated={isAuthenticated}
+        />
         </Suspense>
       </div>
     </motion.header>
