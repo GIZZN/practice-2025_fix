@@ -75,8 +75,8 @@ interface MobileHeaderProps {
 
 const MobileHeader = memo(({ isOpen, closeMenu, user, logout, isAuthenticated }: MobileHeaderProps) => {
   const navItems = [
+    { href: '/delivery-order', label: 'Создать заказ' },
     { href: '/tracking', label: 'Отследить заказ' },
-    { href: '/calculator', label: 'Рассчитать стоимость' },
     { href: '/points', label: 'Пункты выдачи' }
   ];
 
