@@ -238,7 +238,7 @@
   position: relative;
   z-index: 1;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 100px auto 0;
   padding: 2rem;
   position: relative;
   z-index: 2;
@@ -246,7 +246,6 @@
   border-radius: 24px;
   transform-style: preserve-3d;
   perspective: 1000px;
-  margin-top: 100px;
 }
 
 .content::before {
@@ -859,34 +858,119 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .content {
+    margin: 60px auto 0;
+    padding: 1.5rem;
+  }
+
+  .shape1 {
+    width: 400px;
+    height: 400px;
+  }
+
+  .shape2 {
+    width: 300px;
+    height: 300px;
+  }
+
+  .shape3 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .backgroundText {
+    font-size: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-top: 60px;
+    margin-top: -60px;
+  }
+
+  .content {
+    margin: 40px auto 0;
     padding: 1rem;
+    border-radius: 16px;
   }
 
   .itemCard {
     flex-direction: column;
-    gap: 1rem;
+    padding: 1rem;
   }
 
   .itemControls {
     width: 100%;
+    flex-direction: row;
     justify-content: space-between;
   }
 
   .summary {
-    flex-direction: column;
-    gap: 1rem;
-    text-align: center;
+    margin-top: 1.5rem;
+    padding: 1rem;
   }
 
   .formActions {
     flex-direction: column;
+    gap: 1rem;
   }
 
   .submitButton,
   .cancelButton {
     width: 100%;
+  }
+
+  .shape1,
+  .shape2,
+  .shape3 {
+    opacity: 0.2;
+  }
+
+  .backgroundText {
+    font-size: 80px;
+    opacity: 0.02;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    margin: 20px auto 0;
+    padding: 0.75rem;
+  }
+
+  .itemCard {
+    padding: 0.75rem;
+  }
+
+  .itemInfo {
+    gap: 0.5rem;
+  }
+
+  .itemTitle {
+    font-size: 1rem;
+  }
+
+  .itemMeta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .quantity {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .shape1,
+  .shape2,
+  .shape3 {
+    display: none;
+  }
+
+  .backgroundText {
+    display: none;
   }
 }
 

@@ -576,22 +576,11 @@ select.input {
   font-size: 1.1rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .profileContainer {
-    grid-template-columns: 1fr;
-  }
-
-  .sidebar {
-    position: sticky;
-    top: 1rem;
-  }
-
-  .fieldsGroup {
-    grid-template-columns: 1fr;
-  }
-
-  .formSection {
-    padding: 1.25rem;
+    grid-template-columns: 250px 1fr;
+    gap: 1.5rem;
+    padding: 0 1.5rem;
   }
 
   .avatar {
@@ -604,8 +593,198 @@ select.input {
     font-size: 1.5rem;
   }
 
+  .section {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .profileContainer {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+    gap: 1.5rem;
+  }
+
+  .sidebar {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .fieldsGroup {
+    grid-template-columns: 1fr;
+  }
+
+  .formSection {
+    padding: 1.25rem;
+  }
+
+  .avatar {
+    width: 90px;
+    height: 90px;
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .userName {
+    font-size: 1.35rem;
+  }
+
   .sectionTitle {
     font-size: 1.25rem;
+  }
+
+  .userInfo {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .navigation {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .navButton {
+    padding: 0.75rem 1rem;
+    flex: 1 1 calc(50% - 0.5rem);
+    text-align: center;
+    min-width: 140px;
+  }
+
+  .logoutButton {
+    flex: 1 1 100%;
+    text-align: center;
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+  }
+
+  .orderHeader {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+
+  .orderMeta {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 480px) {
+  .profileContainer {
+    margin: 1rem auto;
+    gap: 1rem;
+  }
+
+  .sidebar {
+    padding: 1.25rem;
+    border-radius: 16px;
+  }
+
+  .section {
+    padding: 1.25rem;
+    border-radius: 16px;
+  }
+
+  .avatar {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+  }
+
+  .userName {
+    font-size: 1.25rem;
+  }
+
+  .userEmail {
+    font-size: 0.85rem;
+  }
+
+  .navButton {
+    flex: 1 1 100%;
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .editButton {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .formSection {
+    padding: 1rem;
+  }
+
+  .formSectionTitle {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .fieldLabel {
+    font-size: 0.9rem;
+  }
+
+  .input {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .saveButton {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .orderItem {
+    padding: 0.75rem;
+  }
+
+  .itemMain {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .marketplace {
+    width: 100%;
+    text-align: left;
+  }
+
+  .itemDetails {
+    width: 100%;
+  }
+
+  .itemAttributes {
+    flex-wrap: wrap;
+  }
+
+  .itemAttribute {
+    font-size: 0.85rem;
+  }
+
+  .deliveryDetails {
+    padding: 0.75rem;
+  }
+
+  .deliveryRow {
+    flex-direction: column;
+    gap: 0.25rem;
+    align-items: flex-start;
+  }
+
+  .deliveryLabel {
+    font-size: 0.85rem;
+  }
+
+  .deliveryValue {
+    font-size: 0.9rem;
+  }
+
+  .emptyState {
+    padding: 2rem 1rem;
+  }
+
+  .emptyMessage {
+    font-size: 0.95rem;
   }
 }
 
