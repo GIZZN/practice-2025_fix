@@ -1,0 +1,323 @@
+.container {
+  width: 100%;
+  min-height: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.trackingBox {
+  width: 100%;
+  max-width: 1000px;
+  background: rgba(15, 15, 15, 0.95);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.closeButton:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(135deg, #FF3366, #FF6B6B);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2rem;
+}
+
+.searchSection {
+  margin-bottom: 2rem;
+}
+
+.inputWrapper {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.input {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: rgba(255, 51, 102, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.button {
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #FF3366, #FF6B6B);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 150px;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.error {
+  background: rgba(255, 51, 102, 0.1);
+  border: 1px solid rgba(255, 51, 102, 0.3);
+  padding: 1rem;
+  border-radius: 12px;
+  color: #FF3366;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.errorIcon {
+  font-size: 1.2rem;
+}
+
+.resultContainer {
+  margin-top: 2rem;
+}
+
+.mainContent {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+  .mainContent {
+    grid-template-columns: 1fr;
+  }
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.timelineItem {
+  display: flex;
+  gap: 1.5rem;
+  position: relative;
+}
+
+.timelinePoint {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #FF3366, #FF6B6B);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.timelineContent {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.statusTitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  color: #fff;
+}
+
+.statusDate,
+.statusLocation {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0.5rem 0;
+}
+
+.icon {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.statusDescription {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0.5rem 0;
+}
+
+.estimatedDelivery {
+  margin-top: 1rem;
+  color: #FF3366;
+  font-weight: 500;
+}
+
+.additionalInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.infoCard {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.infoCardTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  color: #fff;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.infoItem {
+  display: flex;
+  justify-content: space-between;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.infoLabel {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.courierInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.courierName {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.courierPhone {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.starRating {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  margin-top: 0.5rem;
+}
+
+.star {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 1.2rem;
+}
+
+.star.filled {
+  color: #FF3366;
+}
+
+.ratingNumber {
+  color: rgba(255, 255, 255, 0.5);
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .trackingBox {
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .inputWrapper {
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .timelineItem {
+    gap: 1rem;
+  }
+
+  .timelinePoint {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+
+  .timelineContent {
+    padding: 1rem;
+  }
+
+  .statusTitle {
+    font-size: 1.1rem;
+  }
+} 

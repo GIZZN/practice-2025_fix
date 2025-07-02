@@ -1,0 +1,86 @@
+:root {
+  --foreground: #171717;
+  --scrollbar-width: 10px;
+  --scrollbar-track: rgba(255, 255, 255, 0.1);
+  --scrollbar-thumb: linear-gradient(45deg, #FF3366, #FF6B6B);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #FF6B6B, #FF3366);
+  border: 1.5px solid transparent;
+  background-clip: content-box;
+}
+
+/* Firefox Scrollbar Styles */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #FF3366 var(--scrollbar-track);
+}
+
+button, 
+input[type="submit"],
+input[type="button"],
+input[type="reset"],
+a,
+[role="button"],
+select,
+summary {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
